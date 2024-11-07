@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Promptly Code - AI Programming Extension</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
             --bg-primary: #1a1b1e;
@@ -12,6 +13,7 @@
             --text-secondary: #a0a0a0;
             --accent: #5c6bc0;
             --hover: #7986cb;
+            --nav-height: 70px;
         }
 
         * {
@@ -27,9 +29,51 @@
             line-height: 1.6;
         }
 
-        .container {
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: var(--nav-height);
+            background-color: var(--bg-secondary);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-content {
             max-width: 1200px;
             margin: 0 auto;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: var(--nav-height) auto 0;
             padding: 2rem;
         }
 
@@ -100,6 +144,72 @@
             color: var(--text-secondary);
         }
 
+        .about-section {
+            background-color: var(--bg-secondary);
+            padding: 4rem 0;
+            margin: 4rem 0;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .about-content h2 {
+            color: var(--accent);
+            margin-bottom: 2rem;
+        }
+
+        .about-content p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: var(--bg-secondary);
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
@@ -112,10 +222,39 @@
             .container {
                 padding: 1rem;
             }
+
+            .nav-content {
+                padding: 0 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="#" class="logo">Promptly Code</a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="https://marketplace.visualstudio.com/items?itemName=promptlycode" target="_blank">Download</a>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
         <header>
             <h1>Promptly Code</h1>
@@ -130,7 +269,7 @@
             </iframe>
         </div>
 
-        <div class="features">
+        <div class="features" id="features">
             <div class="feature-card">
                 <h3>Smart Code Modification</h3>
                 <p>Use Cmd+K to quickly modify and refactor your code with AI assistance.</p>
@@ -156,7 +295,45 @@
                 <p>Quick POC verification for AI programming projects and implementations.</p>
             </div>
         </div>
+
+        <section class="about-section" id="about">
+            <div class="about-content">
+                <h2>About Promptly Code</h2>
+                <p>Promptly Code is a revolutionary VS Code extension that transforms the way developers write code. By leveraging advanced AI technology and multi-agent systems, we provide an intuitive and efficient coding experience.</p>
+                <p>Our mission is to enhance developer productivity through intelligent code assistance, while maintaining the highest standards of code quality and security.</p>
+            </div>
+        </section>
     </div>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: support@promptlycode.ai</p>
+                <p>Address: San Francisco, CA</p>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <a href="#">Documentation</a>
+                <a href="#">API Reference</a>
+                <a href="#">Blog</a>
+                <a href="#">Community</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">License</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
-
