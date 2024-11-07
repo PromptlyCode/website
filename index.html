@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promptly Code - AI Programming Extension</title>
+    <style>
+        :root {
+            --bg-primary: #1a1b1e;
+            --bg-secondary: #2c2e33;
+            --text-primary: #e2e2e2;
+            --text-secondary: #a0a0a0;
+            --accent: #5c6bc0;
+            --hover: #7986cb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #5c6bc0, #7986cb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 0 auto 4rem auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 12px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .feature-card {
+            background-color: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Promptly Code</h1>
+            <p class="subtitle">AI-Powered Programming Assistant for VS Code</p>
+        </header>
+
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/KdTh2FbjVyo" 
+                    title="Promptly Code Demo"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>Smart Code Modification</h3>
+                <p>Use Cmd+K to quickly modify and refactor your code with AI assistance.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Predictive Code Completion</h3>
+                <p>Advanced code completion and prediction with Tab key integration.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Multi-Agent Technology</h3>
+                <p>Docker-based environment verification with ReAct feedback and error correction.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Voice Programming</h3>
+                <p>Interactive programming through voice commands and wake-up functionality.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Rapid Prototyping</h3>
+                <p>Quick POC verification for AI programming projects and implementations.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
